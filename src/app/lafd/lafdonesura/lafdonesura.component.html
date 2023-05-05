@@ -1,0 +1,44 @@
+
+<div class="container" *ngIf="lafdAyas">
+     
+    <div class="card-body">
+
+        <table >
+            
+            
+              <thead>
+                    <tr>
+                         <th></th>
+                          <th></th>
+                          <th>رقم السورة</th>
+                          <th>الآيــــة</th>
+                          <th>الترتيب</th>
+                          <th>اللفظ</th>
+                    </tr>
+              </thead>
+            
+              <tbody>
+                    <tr *ngFor ="let lfd of lafdAyas._embedded.lafdAyas, let i=index">
+                      <!--<td > <button class="btn btn-success ml-2"  >بحث</button></td>-->
+                        <!--td> {{lfd.cao}} </td-->
+                        <td > <button class="btn btn-success ms-2" routerLink="lafdplusallaya/{{lfd.nl}}">اللفظ وما زاد عنه</button></td>
+                        <td > <button class="btn btn-success ms-2" routerLink="lafdeqallaya/{{lfd.nl}}">الـــلفظ بـــعينـــه</button></td>
+                        <td> {{lfd.nsa}} </td>
+                        <td> {{lfd.na}} </td>
+                      
+                        <td> {{lfd.npa}} </td>
+                        <td> {{lfd.nl}} </td>
+                    </tr>
+              </tbody>
+      </table>
+      <mat-paginator 
+      [length]="lafdAyas.page.totalElements"
+      [pageSize]="lafdAyas.page.size"
+      [pageSizeOptions]="[15, 20, 25, 100]"
+      (page)="OnPageChange($event)">
+      </mat-paginator>
+     
+    </div>
+
+</div >
+

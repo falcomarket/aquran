@@ -1,0 +1,56 @@
+<mat-toolbar color="primary">
+        <div class="example-menu">
+            <button class="api_menu" mat-button [matMenuTriggerFor]="main_menu" >الكتاب المبين</button>
+            
+            <mat-menu #main_menu="matMenu" >
+              <button class="smenu" mat-menu-item [matMenuTriggerFor]="surah">السور</button>
+              <button class="smenu" mat-menu-item [matMenuTriggerFor]="ayah">الآيات</button>
+              <button class="smenu" mat-menu-item [matMenuTriggerFor]="lafd">الآلفاظ</button>
+              <button class="smenu" mat-menu-item [matMenuTriggerFor]="kalima">الكلمات</button>
+              <button class="smenu" mat-menu-item [matMenuTriggerFor]="quran">الباحث القرآني</button>
+            </mat-menu>
+            
+            <mat-menu #surah="matMenu">
+              <button class="smenu" mat-menu-item>فهرس السور</button>
+              <button class="smenu" mat-menu-item>Amphibians</button>
+              <button class="smenu" mat-menu-item>Reptiles</button>
+              <button class="smenu" mat-menu-item>Birds</button>
+              <button class="smenu" mat-menu-item>Mammals</button>
+            </mat-menu>
+  
+            <mat-menu #ayah="matMenu">
+              <button class="smenu" mat-menu-item>فهرس الآيات</button>
+              <button class="smenu" mat-menu-item>Amphibians</button>
+              <button class="smenu" mat-menu-item>Reptiles</button>
+              <button class="smenu" mat-menu-item>Birds</button>
+              <button class="smenu" mat-menu-item>Mammals</button>
+            </mat-menu>
+            
+            <mat-menu #lafd="matMenu">
+              <!--button class="smenu" mat-menu-item [routerLink]="[{ outlets: { indexview: ['indexlafd'] }}]">فهرس الألفاظ</button-->
+              <button class="smenu" mat-menu-item routerLink="indexlafd">فهرس الألفاظ</button>
+              <button class="smenu" mat-menu-item>Bala shark</button>
+              <button class="smenu" mat-menu-item>Ballan wrasse</button>
+              <button class="smenu" mat-menu-item>Bamboo shark</button>
+              <button class="smenu" mat-menu-item>Banded killifish</button>
+            </mat-menu>
+            
+            <mat-menu #kalima="matMenu">
+              <button class="smenu" mat-menu-item routerLink="/">فهرس الكلمات</button>
+              <button class="smenu" mat-menu-item>Western toad</button>
+              <button class="smenu" mat-menu-item>Arroyo toad</button>
+              <button class="smenu" mat-menu-item>Yosemite toad</button>
+            </mat-menu>
+            <mat-menu #quran="matMenu">
+              <button class="smenu" mat-menu-item [routerLink]="[{ outlets: { indexview: ['quran'] }}]" >الفهرس القرآني</button>
+                    <!--button class="smenu" mat-menu-item routerLink="quran" >الفهرس القرآني</button-->
+              <button class="smenu" mat-menu-item>Western toad</button>
+              <button class="smenu" mat-menu-item>Arroyo toad</button>
+              <button class="smenu" mat-menu-item>Yosemite toad</button>
+            </mat-menu>
+            
+        </div>  
+        
+    </mat-toolbar> 
+
+    

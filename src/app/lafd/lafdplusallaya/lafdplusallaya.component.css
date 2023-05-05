@@ -1,0 +1,45 @@
+/*.card-body {
+    height:100vh;
+    display:grid;
+    justify-content:center;
+    align-items: center;
+    background-color:rgb(191, 248, 230);
+    
+  }
+  table {
+    
+    border-collapse: collapse;
+    box-shadow: 4px 4px 4px 1px darkgoldenrod;
+    background-color: beige;
+    width: 100%;
+    text-align: right;
+  }
+  th{
+      background-color:rgb(231, 206, 143);
+      padding: 0.50rem 0.50rem;
+      font-family: Tahoma;
+      font-size: 1.10rem;
+      font-weight: 500;
+  }
+  td{
+    padding:0.4rem 0.4rem;
+    font-family: Tahoma;
+    font-size: 1.10rem;
+    font-weight: 500;
+  }
+  tr:nth-child(even){
+    background-color: rgb(233, 226, 218);
+  }
+  .button1 {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+  }
+  */

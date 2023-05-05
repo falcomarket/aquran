@@ -1,0 +1,81 @@
+<div class="container" *ngIf="lafdAyas">
+     
+    <div class="card-body">
+
+        <table >
+              <thead>
+                    <tr>
+                     
+
+                        <th>اللفظ</th>
+                        <th>الترتيب</th>
+                        <th>الآيــــة</th>
+                        <th>رقــــم الآيــــة</th>
+                          <th>رقم السورة</th>
+                      
+                    </tr>
+              </thead>
+              <tbody>
+                    <tr *ngFor ="let lfd of lafdAyas._embedded.lafdAyas, let i=index">
+                      
+                        <td> {{lfd.nl}} </td>  
+                        <td> {{lfd.npa}} </td>
+                        <td> {{lfd.cao}} </td>
+
+                        <td> {{lfd.na}} </td>
+                        <td> {{lfd.nsa}} </td>
+                       
+
+                          
+                    </tr>
+              </tbody>
+      </table>
+     
+      <mat-paginator 
+            [length]="lafdAyas.page.totalElements"
+            [pageSize]="lafdAyas.page.size"
+            [pageSizeOptions]="[5, 10, 25, 100]"
+            (page)="OnPageChange($event)">
+      </mat-paginator>
+
+    </div>
+
+</div >
+
+
+<!--div class="container">
+      
+      <table  mat-table [dataSource]= "lafdAyas"  class = "mat-elevation-z8" >
+                  <ng-container  matColumnDef = "nl" > 
+                        <th  mat-header-cell *matHeaderCellDef>اللفظ</th > 
+                        <td  mat-cell *matCellDef = "let lfd  off lafdAyas._embedded.lafdAyas"> {{lfd.nl}} </td > 
+                  </ng-container >
+  
+                  <ng-container  matColumnDef = "npa" > 
+                        <th  mat-header-cell *matHeaderCellDef >الترتيب</th > 
+                        <td  mat-cell *matCellDef = "let lfd off lafdAyas._embedded.lafdAyas" > {{lfd.npa}} </td > 
+                  </ng-container >
+                  
+                  <ng-container  matColumnDef = "cao" > 
+                        <th  mat-header-cell *matHeaderCellDef>نص الآية</th > 
+                        <td  mat-cell *matCellDef = "let lfd  off lafdAyas._embedded.lafdAyas" > {{lfd.cao}} </td > 
+                  </ng-container >
+                  
+                  <ng-container  matColumnDef = "na" > 
+                        <th  mat-header-cell *matHeaderCellDef >رقــم الآيــة</th > 
+                        <td  mat-cell *matCellDef = "let lfd  off lafdAyas._embedded.lafdAyas" > {{lfd.na}} </td > 
+                  </ng-container >
+                  
+                  <ng-container  matColumnDef = "nsa" > 
+                        <th  mat-header-cell *matHeaderCellDef >رقم السورة</th > 
+                        <td  mat-cell *matCellDef = "let lfd  off lafdAyas._embedded.lafdAyas" > {{lfd.nsa}} </td > 
+                  </ng-container >
+
+                  <tr  mat-header-row *matHeaderRowDef = "displayedColumns" > </tr > 
+                  <tr  mat-row *matRowDef = "let row ; colonnes:displayedColumns ;" > </tr > 
+       </table >
+  
+</div-->
+
+
+

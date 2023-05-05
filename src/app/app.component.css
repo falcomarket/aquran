@@ -1,0 +1,54 @@
+
+
+.body{
+  width:100vw;
+
+}
+.container {
+  
+  display :grid;
+  height :100vh;
+  
+  grid-template-columns:1fr 5fr 1.5fr;
+  grid-template-rows:0.40fr 8fr 0.40fr ;
+  grid-template-areas :
+    "nav nav nav"
+    "main main sidebar"
+    "footer footer footer";
+  grid-gap :0.2rem;
+  
+  
+  color:rgb(3, 46, 12);
+  font-family: "Open Sans", sans-serif;
+  font-size:medium;
+  margin:0;
+  margin-bottom: 0.5%;
+  margin-left:0;
+  padding-bottom: 5px;
+  padding-top: 5px;
+ }
+
+nav{
+  width:100vw;
+  grid-area :nav;
+  background-color:rgb(6, 78, 55);
+}
+
+main{
+  background-color:rgb(190, 255, 235);
+  grid-area :main;
+  overflow-y: scroll;
+}
+
+
+#sidebar{
+  background-color:rgb(190, 255, 235);
+  grid-area :sidebar;
+  /*overflow-y: scroll;*/
+}  
+
+footer{
+  background-color:rgb(198, 230, 220);
+  grid-area :footer;
+  
+}

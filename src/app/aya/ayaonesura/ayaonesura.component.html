@@ -1,0 +1,33 @@
+
+<div class="container" *ngIf="ayahs" >
+    
+  
+    <div class="card-body">
+
+        <table >
+              <thead>
+                    <tr>
+                          
+                        
+
+                          <th>نص الآية</th>
+                          <th>رقم الآية</th>
+                          <th>رقم السورة</th>
+                        
+                    </tr>
+              </thead>
+              <tbody>
+                    <tr *ngFor ="let aya of ayahs._embedded.ayahs,let i=index">
+                        
+                        <!--<td > <button class="btn btn-success ml-2" >الانتقاء</button></td>-->
+                         <td> {{aya.cao}} </td>
+                         <td> {{aya.na}} </td> 
+                         <td> {{aya.nsa}} </td>           
+                    </tr>
+              </tbody>
+      </table>
+      
+    </div>
+
+</div >
+

@@ -1,0 +1,32 @@
+.card-body {
+    height:100vh;
+    display:grid;
+    justify-content:center;
+    align-items: center;
+    background-color: rgb(191, 248, 230);
+   
+  }
+  table {
+    
+    border-collapse: collapse;
+    box-shadow: 4px 4px 4px 1px darkgoldenrod;
+    background-color: beige;
+    width: 100%;
+    text-align: right;
+  }
+  th{
+      background-color:rgb(231, 206, 143);
+      padding: 0.80rem 0.80rem;
+      font-family: Tahoma;
+      font-size: 1.10rem;
+      font-weight: 500;
+  }
+  td{
+    padding:1.4rem 1.4rem;
+    font-family: Tahoma;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  tr:nth-child(even){
+    background-color: rgb(233, 226, 218);
+  }

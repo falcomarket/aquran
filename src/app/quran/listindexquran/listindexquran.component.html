@@ -1,0 +1,54 @@
+<div class="container" *ngIf="surahs">
+    <div class="card-body">
+            <table >
+                  <thead>
+                        <!--tr>
+                            <th>الآيات</th>
+                            <th>السور</th>
+                            <th>فــهرس</th>
+                            <th></th>
+                        </tr-->
+                  </thead>
+                  <tbody>
+                        <tr *ngFor ="let sura of surahs._embedded.surahs, let i=index">
+                             
+                            
+                            <td > <button class="btn btn-success ms-2 btn-sm btn-rounded" [routerLink]="[{ outlets: { mainview: ['lafdonesura',sura.os]}}]">الفـــــــــاظ سورة {{sura.ns}}</button></td>
+                            <!--td > <button class="btn btn-success ms-2 btn-sm btn-rounded" [routerLink]="[{ outlets: { mainview: [ 'ayaonesura',sura.os]}}]">آيـــــــــــات سورة {{sura.ns}}</button></td>
+                            <td > <button class="btn btn-success ms-2 btn-sm btn-rounded" [routerLink]="[{ outlets: { mainview: ['suraonesura',sura.os]}}]">نـــــــــــص سورة  {{sura.ns}}</button></td-->
+                            
+                            <td> <button class="btn btn-success ms-2 rounded-circle" >{{sura.os}}</button></td>
+                            
+                            
+                            <!--td > <button class="btn btn-success ms-2 btn-sm btn-rounded">{{sura.os}}</button></td-->  
+                             
+                             <!--
+                             <td > <button class="btn btn-success ms-2 btn-sm btn-rounded" [routerLink]="[{ outlets: { viewa: ['lafdonesura',sura.os]}}]">الفـــــــــاظ سورة {{sura.ns}}</button></td>
+                             <td > <button class="btn btn-success ms-2 btn-sm btn-rounded" [routerLink]="[{ outlets: { viewa: [ 'ayaonesura',sura.os]}}]">آيـــــــــــات سورة {{sura.ns}}</button></td>
+                             -->
+                             <!--td > <button class="btn btn-success ms-2 btn-sm btn-rounded" routerLink="lafdonesura/{{sura.os}}">الفـــــــــاظ سورة {{sura.ns}}</button></td>
+                            <td > <button class="btn btn-success ms-2 btn-sm btn-rounded" routerLink= "ayaonesura/{{sura.os}}">آيـــــــــــات سورة {{sura.ns}}</button></td>
+                            <td > <button class="btn btn-success ms-2 btn-sm btn-rounded" routerLink="suraonesura/{{sura.os}}">نـــــــــــص سورة  {{sura.ns}}</button></td>
+                            
+                            <!-td > <button class="btn btn-success ms-2 btn-sm btn-rounded" [routerLink]="[{ outlets: { viewa: ['suraonesura',sura.os]}}]">نـــــــــــص سورة  {{sura.ns}}</button></td-->
+                        
+                            <!--     <td> {{sura.nas}} </td>
+                            <td> {{sura.ota}} </td>
+                            
+                            <td> {{sura.ans}} </td>
+                            <td> {{sura.ns}} </td>
+                            <td> {{sura.os}} </td>-->
+                        </tr>
+                  </tbody>
+          </table>
+          <mat-paginator 
+          [length]="surahs.page.totalElements"
+          [pageSize]="surahs.page.size"
+          [pageSizeOptions]="[15, 20, 50, 114]"
+          (page)="OnPageChange($event)">
+          </mat-paginator>
+      </div>
+</div >
+
+
+

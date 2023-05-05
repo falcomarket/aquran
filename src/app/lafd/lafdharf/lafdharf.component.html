@@ -1,0 +1,39 @@
+
+<div class="container" *ngIf="lafdqs">
+   
+    <div class="card-body">
+
+        <table >
+              <thead>
+                    <tr>
+                          <th></th>
+                          <th></th>
+                         
+                          <th>العدد</th>
+                          <th>اللفظ</th>
+                    </tr>
+              </thead>
+              <tbody>
+                    <tr *ngFor ="let lfd of lafdqs._embedded.lafdqs, let i=index">
+                        <!--td > <button class="btn btn-success ml-2"  >بحث</button></td-->
+                        <td > <button class="btn btn-success ms-2" routerLink="lafdplusallaya/{{lfd.nl}}">اللفظ وما زاد عنه</button></td>
+                        <td > <button class="btn btn-success ms-2" routerLink="lafdeqallaya/{{lfd.nl}}">الـــلفظ بـــعينـــه</button></td>
+                        <!--td > <button class="btn btn-success ms-2" [routerLink]="[{ outlets: { resview : ['lafdplusallaya',lfd.nl]}}]">اللفظ وما زاد عنه</button></td>
+                        <td > <button class="btn btn-success ms-2" [routerLink]="[{ outlets: { resview : ['lafdeqallaya',lfd.nl]}}]">الـــلفظ بـــعينـــه</button></td-->
+                        <td> {{lfd.nombre}} </td>
+                        <td> {{lfd.nl}} </td>  
+
+                    </tr>
+              </tbody>
+      
+      </table>
+      <mat-paginator 
+            [length]="lafdqs.page.totalElements"
+            [pageSize]="lafdqs.page.size"
+            [pageSizeOptions]="[10, 15, 25, 100]"
+            (page)="OnPageChange($event)">
+      </mat-paginator>
+    </div>
+
+</div >
+

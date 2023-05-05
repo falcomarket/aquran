@@ -1,0 +1,192 @@
+<div class="container" >
+        <div class="card-body">
+            <table >
+                  <thead>
+                       
+                  </thead>
+                  <tbody>
+                        <tr *ngFor ="let h of alphabet">
+                                
+                                <td>  <button class="btn btn-success btn-rounded " type="button" [routerLink]="[{ outlets: { mainview: ['lafdharf',h.harf]}}]">({{h.harf}})  حـــــرف الـ{{h.nharf}}</button> </td>
+
+                                <td> <button class="btn btn-success ms-2 rounded-circle" >{{h.idabjd}}</button></td>
+                        </tr>
+                  </tbody>
+          </table>
+          
+        </div>
+    
+    </div >
+    
+    
+
+
+
+
+
+
+<!--nav class="navbar navbar-light bg-primary">
+    <ul class="nav nav-pills nav-fill">
+
+        <!-li class="nav-item">
+           <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ي']}}]">ي</a>
+       </li>
+     
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','و']}}]">و</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ه']}}]">ه</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ن']}}]">ن</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','م']}}]">م</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ل']}}]">ل</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ك']}}]">ك</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ق']}}]">ق</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ف']}}]">ف</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','غ']}}]">غ</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ع']}}]">ع</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ظ']}}]">ظ</a>
+       </li>
+    
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ط']}}]">ط</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ض']}}]">ض</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ص']}}]">ص</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ش']}}]">ش</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','س']}}]">س</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ز']}}]">ز</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ر']}}]">ر</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ذ']}}]">ذ</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','د']}}]">د</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','خ']}}]">خ</a>
+       </li>
+       <li class="nav-item">
+           <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ح']}}]">ح</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ج']}}]">ج</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ث']}}]">ث</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ت']}}]">ت</a>
+       </li>
+    
+       <li class="nav-item">
+               <a class="nav-link" [routerLink]="[{ outlets: { mainview: ['lafdharf','ب']}}]">ب</a>
+       </li>
+       
+       <li class="nav-item">
+               <a class="nav-link active" [routerLink]="[{ outlets: { mainview: ['lafdharf','ا']}}]">ا</a>
+       </li-->
+    
+    
+       
+    
+    <!--li class="nav-item">
+        <a class="nav-link" [routerLink]="[{ outlets: {mainview: ['lafdharf','ي']}}]">ي</a>
+    </li>
+  
+    <li class="nav-item">
+            <a class="nav-link" [routerLink]="[{ outlets: {mainview: ['lafdharf','و']}}]">و</a>
+    </li>
+ 
+    <li class="nav-item">
+            <a class="nav-link" [routerLink]="[{ outlets: {mainview: ['lafdharf','ه']}}]">ه</a>
+    </li>
+ 
+    <li class="nav-item">
+            <a class="nav-link" [routerLink]="[{ outlets: {mainview: ['lafdharf','ن']}}]">ن</a>
+    </li>
+ 
+    <li class="nav-item">
+            <a class="nav-link" [routerLink]="[{ outlets: {mainview: ['lafdharf','م']}}]">م</a>
+    </li>
+ 
+ </ul>
+ </nav-->
+
+<!--
+ <li class="nav-item">
+        <a class="nav-link" routerLink="lafdharf/ي">ي</a>
+    </li>
+  
+    <li class="nav-item">
+            <a class="nav-link" routerLink="lafdharf/و">و</a>
+    </li>
+ 
+    <li class="nav-item">
+            <a class="nav-link" routerLink="lafdharf/ه">ه</a>
+    </li>
+ 
+    <li class="nav-item">
+            <a class="nav-link" routerLink="lafdharf/ن">ن</a>
+    </li>
+ 
+    <li class="nav-item">
+            <a class="nav-link" routerLink="lafdharf/م">م</a>
+    </li>
+ 
+ </ul>
+ </nav>
+ -->
